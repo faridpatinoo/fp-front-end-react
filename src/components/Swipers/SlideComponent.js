@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './slide.css';
 
-const SlideComponent = ({ imgSrc, playIconSrc, top, title, type, year, category }) => (
+const SlideComponent = ({ imgSrc, playIconSrc, top, title, type, year }) => (
   <div className='image-container'>
     <img className='thumbnail' src={imgSrc} alt={title} />
     <button className='play-button'>
@@ -25,7 +25,6 @@ SlideComponent.propTypes = {
   title: PropTypes.string.isRequired,
   year: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired
 };
 
 export default SlideComponent;
