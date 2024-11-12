@@ -1,4 +1,3 @@
-// components/Swipers/SwiperComponent.js
 import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
