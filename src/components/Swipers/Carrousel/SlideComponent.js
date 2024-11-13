@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './slide.css';
+import '../Carrousel/slide.css';
 
 const SlideComponent = ({ imgSrc, playIconSrc, top, title, type, year }) => (
   <div className='image-container'>

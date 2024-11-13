@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SwiperComponent from '../Swipers/SwiperComponent';
+import SwiperComponent from '../Swipers/Carrousel/SwiperComponent';
 
 const Section = ({ title, category }) => (
   <div className="section">

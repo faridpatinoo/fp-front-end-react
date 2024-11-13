@@ -1,3 +1,7 @@
+.section {
+  margin: 0 40px;
+}
+
 .section-title {
   font-size: 20px;
   font-weight: bold;

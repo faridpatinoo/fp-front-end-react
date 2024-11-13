@@ -5,8 +5,8 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import '../Swipers/swipers.css';
-import '../Sections/sections.css';
+import '../Carrousel/swiper.css';
+import '../../Sections/sections.css';
 
 import SlideComponent from './SlideComponent';
 
