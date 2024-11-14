@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 
@@ -9,19 +9,11 @@ import '../Carrousel/swiper.css';
 import '../../Sections/sections.css';
 
 import SlideComponent from './SlideComponent';
+import { DataContext } from '../../../Context/DataContext';
 
 const SwiperComponent = ({ category }) => {
   const [swiperRef, setSwiperRef] = useState(null);
-  const [videos, setVideos] = useState([]);
-
-  useEffect(() => {
-    fetch('https://fp-plus-emhtdmegc3e0gvb2.eastus2-01.azurewebsites.net/api/videos')
-      .then((response) => response.json())
-      .then((data) => {
-        setVideos(Array.isArray(data.videos) ? data.videos : []);
-      })
-      .catch((error) => console.error('Error al cargar los datos:', error));
-  }, []);
+  const videos = useContext(DataContext);
 
   return (
     <Swiper

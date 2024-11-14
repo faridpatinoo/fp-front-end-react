@@ -1,20 +1,12 @@
-html,
-body {
-  position: relative;
-  height: 100%;
-}
-
-.background-swiper {
-  width: 100%;
-  height: 100%;
-  margin-bottom: 20px;
-}
 
 .background-swiper-slide {
   font-size: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  width: 100%;
+  height: 100%;
 }
 
 .background-swiper-slide img {
@@ -23,6 +15,7 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
 
 .swiper-pagination-bullet {
   background-color:  white;
