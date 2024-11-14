@@ -1,4 +1,4 @@
-import React, { useRef, useState, useContext } from 'react';
+import React, { useContext } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -6,7 +6,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
 import './autoPlaySwiper.css';
 
 // import required modules
@@ -23,7 +22,7 @@ const AutoplaySwiperComponent = ({ }) => {
       spaceBetween={30}
       centeredSlides={true}
       autoplay={{
-        delay: 2500,
+        delay: 3500,
         disableOnInteraction: false,
       }}
       pagination={{
@@ -43,6 +42,9 @@ const AutoplaySwiperComponent = ({ }) => {
               title={video.title}
               image={video.image}
               description={video.description}
+              videoId={video._id}
+              videoCategory={video.category}
+              videoType={video.type}
             />
           </SwiperSlide>
         ))}

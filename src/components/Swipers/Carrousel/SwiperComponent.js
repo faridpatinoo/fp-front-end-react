@@ -44,6 +44,9 @@ const SwiperComponent = ({ category }) => {
               title={video.title}
               year={video.year}
               type={video.type}
+              videoId={video._id}
+              videoCategory={video.category}
+              videoType={video.type}
             />
           </SwiperSlide>
         ))}
