@@ -30,13 +30,15 @@ const SwiperComponent = ({ category }) => {
         684: { slidesPerView: 2 },
         500: { slidesPerView: 1 },
       }}
-      className="mySwiper"
+      className="mySwiper-1"
     >
       {videos
         .filter((video) => video.category === category && video.top < 11)
         .sort((a, b) => a.top - b.top)
         .map((video) => (
-          <SwiperSlide key={video.id}>
+          <SwiperSlide
+            className='carousel-swiper-slider'
+            key={video.id}>
             <SlideComponent
               imgSrc={video.image}
               playIconSrc="/imgs/icons/play.png"

@@ -29,7 +29,7 @@ const AutoplaySwiperComponent = ({ }) => {
         clickable: true,
       }}
       modules={[Autoplay, Pagination, Navigation]}
-      className="mySwiper"
+      className="mySwiper-2"
     >
       {videos
         .filter((video) => video.tags.includes('isBackground'))
