@@ -37,7 +37,7 @@ const AutoplaySwiperComponent = ({ }) => {
           if (a.title === 'ShowReel (2024)') return -1;
         })
         .map((video) => (
-          <SwiperSlide>
+          <SwiperSlide className='bkg-swiper-slide'>
             <AutoplaySlideComponent
               title={video.title}
               image={video.image}
