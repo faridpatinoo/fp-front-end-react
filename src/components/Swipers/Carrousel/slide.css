@@ -51,6 +51,19 @@
   font-weight: 400;
 }
 
+@media (max-width: 768px) {
+  .video-title {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-extra-info {
+    font-size: 15px;
+  }
+}
+
+
 .video-extra-info {
   font-weight: 200;
 }
