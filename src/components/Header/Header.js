@@ -1,15 +1,16 @@
 import React from 'react';
 import '../Header/header.css'
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
     <header className='fp-header'>
       <div className='left-section'>
-
-        <div className='logo-container'>
-          <img className='fp-logo' src='/imgs/logos/fp-logo.png' alt='logo' />
-        </div>
-
+        <Link to={"/"}>
+          <div className='logo-container'>
+            <img className='fp-logo' src='/imgs/logos/fp-logo.png' alt='logo' />
+          </div>
+        </Link>
       </div>
 
       <div className='middle-section'>
