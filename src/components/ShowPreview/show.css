@@ -1,0 +1,160 @@
+.show-wrapper {
+  height: 100vh;
+
+  position: relative;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .show-wrapper {
+    height: auto;
+    margin-top: 50px;
+  }
+}
+
+.show-img-container {
+  height: 100%;
+}
+
+.show-img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.show-description-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 50px;
+  padding: 0 30px;
+}
+
+@media (max-width: 768px) {
+  .show-description-container {
+    margin-bottom: 25px;
+    font-size: 12px;
+  }
+}
+
+
+.show-play-button {
+  flex: 1;
+  height: 50px;
+  font-size: 15px;
+  font-weight: 500;
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+  background-color: white;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  
+  color: black;
+  transition: 0.15s;
+}
+
+@media (max-width: 768px) {
+  .show-play-button {
+    height: 30px;
+  }
+}
+
+.show-play-button:hover {
+  background-color: #ff4500;
+  color: white;
+}
+
+.show-play-button:hover img {
+  filter: invert(1);
+}
+
+.show-play-button img {
+  height: 20px;
+  object-fit: cover;
+  padding-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .show-play-button img {
+    display: none;
+  }
+}
+
+
+.show-description {
+  flex: 2;
+  padding: 0 20px;
+  text-align: left;
+
+  display: -webkit-box;           /* Crea un contenedor flexible */
+  -webkit-box-orient: vertical;   /* Orienta el contenedor en vertical */
+  -webkit-line-clamp: 3;          /* Limita el texto a 3 líneas */
+  overflow: hidden;               /* Oculta el texto desbordado */
+  text-overflow: ellipsis;        /* Muestra "..." al final del texto truncado */
+  max-width: 100%;                /* Asegura que no se desborde horizontalmente */
+}
+
+@media (max-width: 768px) {
+  .show-description {
+    -webkit-line-clamp: 2
+  }
+}
+
+.show-type {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.show-main-info {
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline;
+
+  position: absolute;
+  top: 100px;
+  left: 30px;
+}
+
+@media (max-width: 768px) {
+  .show-main-info {
+    top: 15px; 
+  }
+}
+
+
+.show-title {
+  font-weight: bold;
+  font-size: 70px;
+  font-style: italic;
+  color: white;
+}
+
+.show-category { 
+  font-size: 30px;
+  font-weight: lighter;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .show-title {
+    font-size: 30px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .show-category {
+    font-size: 20px; 
+  }
+}

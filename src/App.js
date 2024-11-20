@@ -3,9 +3,12 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+
 import AutoplaySwiper from './components/Swipers/Autoplay/AutoplaySwiperComponent';
 import Section from './components/Sections/Sections';
-import Footer from './components/Footer/Footer';
+
+import ShowComponent from './components/ShowPreview/Show';
 
 import { DataProvider } from './Context/DataContext';
 
@@ -35,7 +38,8 @@ function App() {
               path='/showPreview'
               element={
                 <>
-
+                  <ShowComponent />
+                  <Section title="Animations" category="Animations" />
                 </>
               }
             />
