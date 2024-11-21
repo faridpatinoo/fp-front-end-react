@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import '../Carrousel/slide.css';
 import { Link } from 'react-router-dom';
 
-const SlideComponent = ({ imgSrc, playIconSrc, top, title, type, year, videoId, videoType, videoCategory }) => (
+const SlideComponent = ({ imgSrc, top, title, type, year, videoId, videoType, videoCategory }) => (
   <div className='image-container'>
     <Link to={`/showPreview?videoId=${videoId}&videoType=${videoType}&videoCategory=${videoCategory}`}>
       <img className='thumbnail' src={imgSrc} alt={title} />
       <button className='play-button'>
-        <img src={playIconSrc} alt="Play icon" />
+        <img className='play-button-icon' src='/imgs/icons/play.png' alt="Play icon" />
       </button>
     </Link>
     <div className='description-container'>
@@ -23,7 +23,6 @@ const SlideComponent = ({ imgSrc, playIconSrc, top, title, type, year, videoId, 
 
 SlideComponent.propTypes = {
   imgSrc: PropTypes.string.isRequired,
-  playIconSrc: PropTypes.string.isRequired,
   top: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   year: PropTypes.string.isRequired,

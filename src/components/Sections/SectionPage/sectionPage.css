@@ -10,5 +10,12 @@
 }
 
 .section-page-title {
-  padding-top: 70px;
+  padding: 70px 40px 20px;
+  text-align: left; /* Centra el texto del título */
+  font-size: 1.5rem; /* Aumenta el tamaño del texto */
+  font-weight: bold; /* Hace el texto más visible */
+}
+
+.play-button-icon{
+  height: 100%;
 }

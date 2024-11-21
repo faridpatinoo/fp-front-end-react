@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import PropTypes from 'prop-types';
 import SlideComponent from '../../Swipers/Carrousel/SlideComponent';
 
 import '../SectionPage/sectionPage.css'
@@ -19,7 +18,6 @@ const SectionPage = () => {
             <SlideComponent
               key={video._id}
               imgSrc={video.image}
-              playIconSrc='/imgs/icons/play.png'
               top={video.top}
               title={video.title}
               year={video.year}

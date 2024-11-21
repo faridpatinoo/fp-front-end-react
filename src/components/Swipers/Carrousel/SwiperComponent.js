@@ -41,7 +41,6 @@ const SwiperComponent = ({ category }) => {
             key={video.id}>
             <SlideComponent
               imgSrc={video.image}
-              playIconSrc="/imgs/icons/play.png"
               top={video.top}
               title={video.title}
               year={video.year}
