@@ -2,13 +2,15 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+import ScrollToTop from './components/Utils/ScrollToTop';
+
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
 import AutoplaySwiper from './components/Swipers/Autoplay/AutoplaySwiperComponent';
 import Section from './components/Sections/Sections';
 
-import ShowComponent from './components/ShowPreview/Show';
+import ShowComponent from './components/ShowPreview/ShowPreviewComponent';
 
 import { DataProvider } from './Context/DataContext';
 
@@ -38,6 +40,7 @@ function App() {
               path='/showPreview'
               element={
                 <>
+                  <ScrollToTop />
                   <ShowComponent />
                   <Section title="Animations" category="Animations" />
                 </>
