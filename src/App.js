@@ -8,9 +8,10 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
 import AutoplaySwiper from './components/Swipers/Autoplay/AutoplaySwiperComponent';
-import Section from './components/Sections/Sections';
+import Section from './components/Sections/Sections/Sections';
 
 import ShowComponent from './components/ShowPreview/ShowPreviewComponent';
+import SectionPage from './components/Sections/SectionPage/SectionPage';
 
 import { DataProvider } from './Context/DataContext';
 
@@ -36,6 +37,7 @@ function App() {
                 </>
               }
             />
+
             <Route
               path='/showPreview'
               element={
@@ -43,6 +45,16 @@ function App() {
                   <ScrollToTop />
                   <ShowComponent />
                   <Section title="Animations" category="Animations" />
+                </>
+              }
+            />
+
+            <Route
+              path='/section'
+              element={
+                <>
+                  <ScrollToTop />
+                  <SectionPage />
                 </>
               }
             />

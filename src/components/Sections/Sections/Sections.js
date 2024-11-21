@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SwiperComponent from '../Swipers/Carrousel/SwiperComponent';
+import SwiperComponent from '../../Swipers/Carrousel/SwiperComponent';
+import { Link } from 'react-router-dom';
 
 const Section = ({ title, category }) => (
   <div className="section">
-    <div className="section-title">{title}</div>
+    <Link to={`/section`}>
+      <div className="section-title">{title}</div>
+    </Link>
     <SwiperComponent category={category} />
   </div>
 );

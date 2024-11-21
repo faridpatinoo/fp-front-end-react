@@ -1,0 +1,14 @@
+.section-page-container {
+  position: relative;
+}
+
+.container-page-grid {
+  display: grid;
+  gap: 20px;
+  padding: 0 40px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.section-page-title {
+  padding-top: 70px;
+}

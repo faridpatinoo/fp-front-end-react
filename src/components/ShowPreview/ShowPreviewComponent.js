@@ -13,7 +13,6 @@ const ShowPreviewComponent = () => {
         .filter((video) => video._id === videoId)
         .map((video) => (
           <ShowComponent
-            key={video.id} // Agrega una clave única si estás generando componentes dinámicos
             title={video.title}
             description={video.description}
             image={video.image}

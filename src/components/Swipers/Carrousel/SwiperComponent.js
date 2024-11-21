@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 
@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import '../Carrousel/swiper.css';
-import '../../Sections/sections.css';
+import '../../Sections/Sections/sections.css';
 
 import SlideComponent from './SlideComponent';
 import { DataContext } from '../../../Context/DataContext';
