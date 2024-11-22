@@ -4,7 +4,7 @@ import '../ShowPreview/show.css';
 
 import { Link } from 'react-router-dom';
 
-const ShowComponent = ({ title, description, image, category, type }) => (
+const ShowComponent = ({ title, description, image, category, type, azureLink }) => (
   <div className='show-wrapper'>
     <div className='show-img-container'>
       <img src={image} />
@@ -16,9 +16,11 @@ const ShowComponent = ({ title, description, image, category, type }) => (
     </div>
 
     <div className='show-description-container'>
-      <button className='show-play-button'>
-        <img src='/imgs/icons/play.png' alt="Play Icon" /> Play
-      </button>
+      <Link className='show-play-button' to={azureLink}>
+        <button className='show-play-button'>
+          <img src='/imgs/icons/play.png' alt="Play Icon" /> Play
+        </button>
+      </Link>
       <div className='show-description'>{description}</div>
       <div className='show-type'>{type}</div>
     </div>
@@ -31,6 +33,7 @@ ShowComponent.propTypes = {
   image: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
+  azureLink: PropTypes.string.isRequired,
 }
 
 export default ShowComponent;

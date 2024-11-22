@@ -6,6 +6,9 @@ import '../SectionPage/sectionPage.css'
 import { DataContext } from '../../../Context/DataContext';
 
 const SectionPage = () => {
+  const url = new URL(window.location.href);
+  const videosCategory = url.searchParams.get('videosCategory');
+
   const videos = useContext(DataContext);
 
   return (
@@ -13,7 +16,8 @@ const SectionPage = () => {
       <div className="section-page-title">Animations</div>
       <div className="container-page-grid">
         {videos
-          .filter(video => video.category === 'Animations')
+          .filter(video => video.category === videosCategory)
+          .sort((a, b) => a.top - b.top)
           .map(video => (
             <SlideComponent
               key={video._id}

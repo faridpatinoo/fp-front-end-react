@@ -18,6 +18,7 @@ const ShowPreviewComponent = () => {
             image={video.image}
             category={video.category}
             type={video.type}
+            azureLink={video.video}
           />
         ))}
     </>

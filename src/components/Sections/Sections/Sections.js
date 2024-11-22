@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Section = ({ title, category }) => (
   <div className="section">
-    <Link to={`/section`}>
+    <Link to={`/section?videosCategory=${category}`}>
       <div className="section-title">{title}</div>
     </Link>
     <SwiperComponent category={category} />
