@@ -25,4 +25,4 @@ const ShowPreviewComponent = () => {
   );
 }
 
-export default ShowPreviewComponent;
+export default ShowPreviewComponent; 

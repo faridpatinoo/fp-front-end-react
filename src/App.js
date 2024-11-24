@@ -47,9 +47,6 @@ function App() {
                 <>
                   <ScrollToTop />
                   <ShowComponent />
-                  {videos?.map(video => {
-                    return <Section key={video._id} title={video.category} category={video.category} />;
-                  })}
                 </>
               }
             />
