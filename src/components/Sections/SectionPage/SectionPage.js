@@ -13,7 +13,7 @@ const SectionPage = () => {
 
   return (
     <main className="section-page-container">
-      <div className="section-page-title">Animations</div>
+      <div className="section-page-title">{videosCategory}</div>
       <div className="container-page-grid">
         {videos
           .filter(video => video.category === videosCategory)
