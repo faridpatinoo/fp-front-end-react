@@ -1,5 +1,4 @@
 import './App.css';
-import React, { useContext } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import ScrollToTop from './components/Utils/ScrollToTop';
@@ -14,11 +13,8 @@ import ShowComponent from './components/ShowPreview/ShowPreviewComponent';
 import SectionPage from './components/Sections/SectionPage/SectionPage';
 
 import { DataProvider } from './Context/DataContext';
-import { DataContext } from './Context/DataContext';
 
 function App() {
-  const videos = useContext(DataContext);
-
   return (
     <div className="App">
       <Router>
