@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer';
 
 import AutoplaySwiper from './components/Swipers/Autoplay/AutoplaySwiperComponent';
 import Section from './components/Sections/Sections/Sections';
+import DynamicSection from './components/Sections/DynamicSection/DynamicSection';
 
 import ShowComponent from './components/ShowPreview/ShowPreviewComponent';
 import SectionPage from './components/Sections/SectionPage/SectionPage';
@@ -20,6 +21,7 @@ function App() {
       <Router>
         <DataProvider>
           <Header />
+
           <Routes>
             <Route
               path="/"
@@ -43,6 +45,7 @@ function App() {
                 <>
                   <ScrollToTop />
                   <ShowComponent />
+                  <DynamicSection />
                 </>
               }
             />
