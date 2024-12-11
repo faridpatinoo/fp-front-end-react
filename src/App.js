@@ -1,7 +1,9 @@
 import './App.css';
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import ScrollToTop from './components/Utils/ScrollToTop';
+import UploadVideoModal from './components/Modal/UploadVideoModal';
 
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -16,11 +18,27 @@ import SectionPage from './components/Sections/SectionPage/SectionPage';
 import { DataProvider } from './Context/DataContext';
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <div className="App">
       <Router>
         <DataProvider>
-          <Header />
+          <Header onUploadClick={openModal} />
+
+          {isModalOpen && (
+            <UploadVideoModal onClose={closeModal}>
+              <h2>Upload Your Video</h2>
+              <form>
+                <input type="file" accept="video/*" />
+                <button type="submit">Upload</button>
+                <button type="button" onClick={closeModal}>Cancel</button>
+              </form>
+            </UploadVideoModal>
+          )}
 
           <Routes>
             <Route
