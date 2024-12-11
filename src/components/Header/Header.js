@@ -15,7 +15,7 @@ const Header = ({ onUploadClick }) => { // Accept the prop
           className="upload-icon-container"
           onClick={onUploadClick} // Attach the click event
         >
-          <img className="fp-logo" src="/imgs/icons/upload.png" alt="upload-icon" />
+          <img className="upload-icon" src="/imgs/icons/upload.png" alt="upload-icon" />
         </div>
       </div>
 

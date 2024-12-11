@@ -30,14 +30,7 @@ function App() {
           <Header onUploadClick={openModal} />
 
           {isModalOpen && (
-            <UploadVideoModal onClose={closeModal}>
-              <h2>Upload Your Video</h2>
-              <form>
-                <input type="file" accept="video/*" />
-                <button type="submit">Upload</button>
-                <button type="button" onClick={closeModal}>Cancel</button>
-              </form>
-            </UploadVideoModal>
+            <UploadVideoModal onClose={closeModal} />
           )}
 
           <Routes>
