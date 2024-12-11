@@ -1,7 +1,18 @@
-import React from 'react';
-import '../Modal/uploadVideoModal.css'
+import React, { useCallback } from 'react';
+import { useDropzone } from 'react-dropzone';
+import '../Modal/uploadVideoModal.css';
 
 const UploadVideoModal = ({ onClose }) => {
+  const onDrop = useCallback((acceptedFiles) => {
+    // Handle files here
+    console.log(acceptedFiles);
+  }, []);
+
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+    onDrop,
+    accept: 'video/*',
+  });
+
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -9,11 +20,23 @@ const UploadVideoModal = ({ onClose }) => {
           &times;
         </button>
 
-        <h2 className='modal-headline'>Upload Your Video</h2>
+        <h2>Upload Your Video</h2>
         <form>
-          <input type="file" accept="video/*" />
+          <div
+            {...getRootProps()}
+            className={`dropzone ${isDragActive ? 'dragging' : ''}`}
+          >
+            <input {...getInputProps()} />
+            {isDragActive ? (
+              <p>Drop the files here ...</p>
+            ) : (
+              <p>Drag and drop a video file here, or click to select one</p>
+            )}
+          </div>
           <button type="submit">Upload</button>
-          <button type="button" onClick={onClose}>Cancel</button>
+          <button type="button" onClick={onClose}>
+            Cancel
+          </button>
         </form>
       </div>
     </div>
