@@ -12,7 +12,7 @@
 }
 
 .modal-content {
-  background: white;
+  background: #212121;
   padding: 20px;
   border-radius: 10px;
   max-width: 500px;
@@ -30,23 +30,108 @@
   cursor: pointer;
 }
 
-.modal-headline{
-  color: black;
-}
-
 .dropzone {
-  border: 2px dashed #ccc;
+  border: 2px dashed #ff4500;
   padding: 20px;
   text-align: center;
   cursor: pointer;
   border-radius: 5px;
   background-color: #f9f9f9;
+  margin: 20px 0;
 }
 
 .dropzone.dragging {
-  border-color: #007bff;
-  background-color: #e9f7ff;
+  border-color: white;
+  background-color: #ff936c;
 }
 
+.video-upload-form{
+  display: flex;
+  flex-direction: column;
+}
 
+.required-info-form{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.input-select-options{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.select-options{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.select-options {
+  align-items: first baseline;
+  padding-bottom: 10px;
+}
+
+.select-options p {
+  padding-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-required {
+  color: #ff4500;
+}
+
+input, textarea, select{
+  color: black;
+  border: none;
+  border-radius: 2px;
+}
+
+.video-title-input{
+  width: 250px;
+  height: 20px;
+  padding: 10px;
+}
+
+.vide-description-title {
+  width: 250px;
+  height: 140px;
+  padding: 10px; /* Adds padding around the text */
+  resize: vertical; /* Allows the user to resize the textarea vertically */
+  box-sizing: border-box; /* Ensures padding doesn't affect the element's total width and height */
+}
+
+.form-checkbox{
+  padding-left: 5px;
+}
+
+.form-buttons-container{
+  padding-top: 20px;
+}
+
+.upload-button{
+  margin-right: 8px;
+}
+
+.upload-button, .cancel-button{
+  padding: 10px 40px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 15px;
+  color: black;
+  background-color: white;
+  transition: 0.15s;
+}
+
+.upload-button:hover, .cancel-button:hover{
+  background-color: #ff4500;
+  color: white;
+}
+
+.form-file-name{
+  color: black;
+}
 

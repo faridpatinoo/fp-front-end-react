@@ -156,8 +156,8 @@
   filter: invert(1);
 }
 
-@media (max-width: 400px) {
-  .instagram-icon-container, .instagram-icon-container img {
+@media (max-width: 600px) {
+  .instagram-icon-container, .instagram-icon-container img, .upload-icon-container, .upload-icon {
     display: none;
   }
 }
