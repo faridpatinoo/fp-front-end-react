@@ -35,7 +35,7 @@ jobs:
 
       - name: Build and push
         run: |
-          docker buildx build --platform linux/amd64,linux/arm64 -t ${{ vars.DOCKERHUB_USERNAME }}fpplus-frontend-react:latest --push .
+          docker buildx build --platform linux/amd64,linux/arm64 -t ${{ vars.DOCKERHUB_USERNAME }}/fp-plus-docker:latest --push .
           
   # deploy:
   #   runs-on: ubuntu-latest
