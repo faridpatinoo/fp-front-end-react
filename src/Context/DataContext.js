@@ -6,7 +6,7 @@ export const DataProvider = ({ children }) => {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
-    fetch('https://fp-plus-emhtdmegc3e0gvb2.eastus2-01.azurewebsites.net/api/videos')
+    fetch('https://fp-back-end-ajdfckgxadcye7fy.eastus2-01.azurewebsites.net/api/videos')
       .then((response) => response.json())
       .then((data) => {
         setVideos(Array.isArray(data.videos) ? data.videos : []);
