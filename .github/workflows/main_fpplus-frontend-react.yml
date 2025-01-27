@@ -44,6 +44,6 @@ jobs:
     steps:
       - uses: azure/webapps-deploy@v2
         with:
-          app-name: 'fp-plus-react'
+          app-name: 'fp-plus-react-terraform'
           publish-profile: ${{ secrets.azureWebAppPublishProfile }}
           images: '${{ vars.DOCKERHUB_USERNAME }}/fp-plus-docker:${{ github.sha }}'
